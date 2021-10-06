@@ -7,6 +7,9 @@ const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
 });
 //https://datatracker.ietf.org/doc/html/rfc8017
 
+// RSA - https://datatracker.ietf.org/doc/html/rfc8017 Optimal asymmetric encryption padding (OAEP) is the recommended padding scheme for RSA encryption and decryption. 
+//The padding schemes for RSA digital signing and RSA public-key encryption are not the same. OAEP padding is recommended for RSA encryption; 
+//PSS padding is recommended for RSA digital signing.These two padding schemes are not interchangeable.
 const data = "my secret sauce data";
 
 const encryptedData = crypto.publicEncrypt(
