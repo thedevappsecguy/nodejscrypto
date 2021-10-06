@@ -5,6 +5,22 @@ const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
   // length for RSA keys is 4096 bits
   modulusLength: 4096,
 });
+
+console.log(
+	publicKey.export({
+		type: "pkcs1",
+		format: "pem",
+	}),
+
+  
+	privateKey.export({
+		type: "pkcs1",
+		format: "pem",
+        cipher: 'aes-256-cbc',
+        passphrase: 'top secret'
+        
+	})
+)
 //https://datatracker.ietf.org/doc/html/rfc8017
 
 // RSA - https://datatracker.ietf.org/doc/html/rfc8017 Optimal asymmetric encryption padding (OAEP) is the recommended padding scheme for RSA encryption and decryption. 
