@@ -4,6 +4,22 @@ const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     // length for RSA keys is 4096 bits
     modulusLength: 4096,
   });
+
+console.log(
+	publicKey.export({
+		type: "pkcs1",
+		format: "pem",
+	}),
+
+  
+	privateKey.export({
+		type: "pkcs1",
+		format: "pem",
+        cipher: 'aes-256-cbc',
+        passphrase: 'top secret'
+        
+	})
+)
 const verifiableData = "to be verified";
 
 //sign and then verify --> This proves the authenticity of the message 
