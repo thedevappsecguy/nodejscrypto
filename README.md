@@ -15,4 +15,8 @@ PSS padding is recommended for RSA digital signing.These two padding schemes are
 -->AES GCM : https://datatracker.ietf.org/doc/html/rfc5116
 
 There are four inputs for authenticated encryption: the secret key, initialization vector (IV) (sometimes called a nonce†), the plaintext itself, and optional additional authentication data (AAD).The nonce and AAD are passed in the clear. There are two outputs: the ciphertext, which is exactly the same length as the plaintext, and an authentication tag (the "tag").The tag is sometimes called the message authentication code (MAC) or integrity check value (ICV).
+https://nodejs.org/docs/latest-v16.x/api/crypto.html#crypto_decipher_setaad_buffer_options
+
+NOTE: Take a look at http://safecurves.cr.yp.to/ before choosing a curve for your cryptography operations.
+
 
