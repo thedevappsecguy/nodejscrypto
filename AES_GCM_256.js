@@ -58,3 +58,12 @@ try {
 } catch (error) {
   console.log(error.message);
 }
+
+var key = new Buffer('8CBDEC62EB4DCA778F842B02503011B2', 'hex')
+var src = new Buffer('0002123401010100000000000000c631', 'hex')
+// ruleid:node_aes_ecb
+cipher = crypto.createCipheriv("aes-128-ecb", key, '')
+cipher.setAutoPadding(false)
+result = cipher.update(src).toString('hex');
+result += cipher.final().toString('hex');
+"result   : " + result
