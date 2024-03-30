@@ -19,4 +19,5 @@ https://nodejs.org/docs/latest-v16.x/api/crypto.html#crypto_decipher_setaad_buff
 
 NOTE: Take a look at http://safecurves.cr.yp.to/ before choosing a curve for your cryptography operations.
 
+**Note : These are all example passwords for demo ,but in general use better password generation techniques https://blog.1password.com/how-to-generate-random-password/
 
